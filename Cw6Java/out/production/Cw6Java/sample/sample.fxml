@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="939.0" prefWidth="1087.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+      <Label layoutX="443.0" text="Biblioteka">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="514.0" layoutY="252.0" prefHeight="27.0" prefWidth="61.0" text="Ksiązki" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="6.0" layoutY="597.0" text="Komiksy">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="autor" layoutX="100.0" layoutY="85.0" />
+      <SplitMenuButton fx:id="dodaj_box" layoutX="786.0" layoutY="85.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="113.0" text="Rodzaj" />
+      <TextField fx:id="tytul" layoutX="266.0" layoutY="85.0" />
+      <TextField fx:id="gatunek" layoutX="432.0" layoutY="86.0" />
+      <Button layoutX="930.0" layoutY="86.0" mnemonicParsing="false" onAction="#dodaj" prefHeight="25.0" prefWidth="67.0" text="Dodaj" />
+      <Button layoutX="15.0" layoutY="183.0" mnemonicParsing="false" onAction="#usun" prefHeight="25.0" prefWidth="131.0" text="Usuń" />
+      <Button layoutX="198.0" layoutY="221.0" mnemonicParsing="false" onAction="#edytuj" prefHeight="25.0" prefWidth="131.0" text="Edytuj" />
+      <Label layoutX="153.0" layoutY="53.0" text="Autor">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="321.0" layoutY="53.0" text="Tytuł">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="473.0" layoutY="53.0" text="Gatunek">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="opis" layoutX="607.0" layoutY="85.0" />
+      <Label layoutX="663.0" layoutY="53.0" text="Opis">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ListView fx:id="id_ksiazki" layoutX="2.0" layoutY="308.0" prefHeight="289.0" prefWidth="37.0" />
+      <Label layoutX="15.0" layoutY="286.0" text="ID" />
+      <ListView fx:id="autor_ksiazki" layoutX="39.0" layoutY="308.0" prefHeight="289.0" prefWidth="228.0" />
+      <Separator layoutX="-3.0" layoutY="117.0" prefHeight="3.0" prefWidth="1085.0" />
+      <Separator layoutX="-6.0" layoutY="52.0" prefHeight="3.0" prefWidth="1085.0" />
+      <Label layoutX="14.0" layoutY="120.0" text="Usun po id">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <SplitMenuButton fx:id="usun_box" layoutX="58.0" layoutY="147.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Rodzaj" />
+      <TextField fx:id="id_usun" layoutX="13.0" layoutY="147.0" prefHeight="25.0" prefWidth="37.0" promptText="id" />
+      <Label layoutX="223.0" layoutY="120.0" text="Edytuj opis">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="id_edytuj" layoutX="198.0" layoutY="147.0" prefHeight="25.0" prefWidth="37.0" promptText="id" />
+      <SplitMenuButton fx:id="edytuj_box" layoutX="242.0" layoutY="147.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Rodzaj" />
+      <Label layoutX="400.0" layoutY="120.0" text="Szukaj autora">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="szukaj_autor" layoutX="397.0" layoutY="147.0" prefHeight="25.0" prefWidth="113.0" promptText="autor" />
+      <SplitMenuButton fx:id="szukaj_autor_box" layoutX="397.0" layoutY="183.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="113.0" text="Rodzaj" />
+      <TextField fx:id="edytuj_opis_pole" layoutX="198.0" layoutY="183.0" prefHeight="25.0" prefWidth="131.0" promptText="opis" />
+      <Button layoutX="397.0" layoutY="221.0" mnemonicParsing="false" onAction="#szukaj_autora" prefHeight="25.0" prefWidth="113.0" text="Szukaj" />
+      <Label layoutX="584.0" layoutY="120.0" text="Szukaj gatunku">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="szukaj_gatunek" layoutX="581.0" layoutY="147.0" prefHeight="25.0" prefWidth="113.0" promptText="gatunek" />
+      <SplitMenuButton fx:id="szukaj_gatunek_box" layoutX="581.0" layoutY="183.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="113.0" text="Rodzaj" />
+      <Button layoutX="581.0" layoutY="221.0" mnemonicParsing="false" onAction="#szukaj_gatunek" prefHeight="25.0" prefWidth="113.0" text="Szukaj" />
+      <Label layoutX="746.0" layoutY="120.0" text="Szukaj tytulu">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="szukaj_tytul" layoutX="743.0" layoutY="147.0" prefHeight="25.0" prefWidth="113.0" promptText="tytul" />
+      <SplitMenuButton fx:id="szukaj_tytul_box" layoutX="743.0" layoutY="183.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="113.0" text="Rodzaj" />
+      <Button layoutX="743.0" layoutY="221.0" mnemonicParsing="false" onAction="#szukaj_tytul" prefHeight="25.0" prefWidth="113.0" text="Szukaj" />
+      <Separator layoutX="2.0" layoutY="252.0" prefHeight="3.0" prefWidth="1085.0" />
+      <Separator layoutX="358.0" layoutY="117.0" orientation="VERTICAL" prefHeight="138.0" prefWidth="5.0" />
+      <Separator layoutX="541.0" layoutY="117.0" orientation="VERTICAL" prefHeight="138.0" prefWidth="5.0" />
+      <Separator layoutX="712.0" layoutY="117.0" orientation="VERTICAL" prefHeight="138.0" prefWidth="5.0" />
+      <Separator layoutX="173.0" layoutY="117.0" orientation="VERTICAL" prefHeight="138.0" prefWidth="5.0" />
+      <Separator layoutX="896.0" layoutY="117.0" orientation="VERTICAL" prefHeight="138.0" prefWidth="5.0" />
+      <Label layoutX="130.0" layoutY="286.0" text="Autor" />
+      <ListView fx:id="tytul_ksiazki" layoutX="267.0" layoutY="308.0" prefHeight="289.0" prefWidth="228.0" />
+      <Label layoutX="366.0" layoutY="286.0" text="Tytul" />
+      <ListView fx:id="gatunek_ksiazki" layoutX="495.0" layoutY="308.0" prefHeight="289.0" prefWidth="157.0" />
+      <Label layoutX="559.0" layoutY="286.0" text="Gatunek" />
+      <ListView fx:id="opis_ksiazki" layoutX="652.0" layoutY="308.0" prefHeight="289.0" prefWidth="427.0" />
+      <Label layoutX="853.0" layoutY="286.0" text="Opis" />
+      <ListView fx:id="id_komiksu" layoutX="3.0" layoutY="646.0" prefHeight="289.0" prefWidth="37.0" />
+      <Label layoutX="16.0" layoutY="624.0" text="ID" />
+      <ListView fx:id="autor_komiksu" layoutX="40.0" layoutY="646.0" prefHeight="289.0" prefWidth="228.0" />
+      <Label layoutX="131.0" layoutY="624.0" text="Autor" />
+      <ListView fx:id="tytul_komiksu" layoutX="268.0" layoutY="646.0" prefHeight="289.0" prefWidth="228.0" />
+      <Label layoutX="367.0" layoutY="624.0" text="Tytul" />
+      <ListView fx:id="gatunek_komiksu" layoutX="496.0" layoutY="646.0" prefHeight="289.0" prefWidth="157.0" />
+      <Label layoutX="560.0" layoutY="624.0" text="Gatunek" />
+      <ListView fx:id="opis_komiksu" layoutX="653.0" layoutY="646.0" prefHeight="289.0" prefWidth="427.0" />
+      <Label layoutX="854.0" layoutY="624.0" text="Opis" />
+      <Button layoutX="920.0" layoutY="147.0" mnemonicParsing="false" onAction="#wyszukaj_wszystko" prefHeight="25.0" prefWidth="149.0" text="Pokaz wszystko" />
+    </children>
+</AnchorPane>
